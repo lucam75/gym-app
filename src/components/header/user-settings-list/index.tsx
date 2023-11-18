@@ -34,14 +34,14 @@ export const UserSettingsList: React.FC<UserSettingsListPropsType> = ({ isActive
 
     return (
         <div className={cn}>
-            <p className={styles.loggedInText}>Вы вошли как:</p>
+            <p className={styles.loggedInText}>Has iniciado sesión como:</p>
             <p className={styles.email}>
                 <b>{userEmail}</b>
             </p>
             <ul>
                 {!isUserAuthorizedWithGoogle && (
                     <ButtonNav
-                        name={'Настройки'}
+                        name={'Ajustes'}
                         to={ROUTE_PATH.SETTINGS}
                         onClick={onCLickSettingsToggler}
                         icon={<TbSettings size={22} />}
@@ -50,14 +50,14 @@ export const UserSettingsList: React.FC<UserSettingsListPropsType> = ({ isActive
                 <li></li>
                 <li>
                     <ButtonNav
-                        name={'Отзывы'}
+                        name={'Reseñas'}
                         to={ROUTE_PATH.REVIEWS}
                         onClick={onCLickSettingsToggler}
                         icon={<MdOutlineReviews size={22} />}
                     />
                 </li>
                 <li>
-                    <ButtonNav name={'Выйти'} onClick={onClickSignOut} icon={<VscSignOut size={22} />} />
+                    <ButtonNav name={'Salir'} onClick={onClickSignOut} icon={<VscSignOut size={22} />} />
                 </li>
             </ul>
         </div>

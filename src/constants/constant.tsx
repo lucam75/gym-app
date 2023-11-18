@@ -11,9 +11,9 @@ export type basicExerciseListType = {
 };
 
 export const navigation = [
-    { name: 'Календарь', path: ROUTE_PATH.CALENDAR, icon: <BsCalendar3 size={20} /> },
-    { name: 'Тренировки', path: ROUTE_PATH.WORKOUT, icon: <MdOutlineFitnessCenter size={20} /> },
-    { name: 'Аналитика', path: ROUTE_PATH.ANALYTICS, icon: <TbDeviceAnalytics size={20} /> },
+    { name: 'Calendario', path: ROUTE_PATH.CALENDAR, icon: <BsCalendar3 size={20} /> },
+    { name: 'Ejercicios', path: ROUTE_PATH.WORKOUT, icon: <MdOutlineFitnessCenter size={20} /> },
+    { name: 'Analítica', path: ROUTE_PATH.ANALYTICS, icon: <TbDeviceAnalytics size={20} /> },
 ];
 
 export const workoutColors = ['#a9d5ce', '#f0cbcb', '#e1d5f0', '#b9e4f4', '#EAE7DC'];

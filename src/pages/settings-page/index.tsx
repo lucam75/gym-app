@@ -21,7 +21,7 @@ export const SettingsPage: FC = () => {
 
     return (
         <Container>
-            <h2 className={styles.title}>Настройки пользователя</h2>
+            <h2 className={styles.title}>Ajustes de usuario</h2>
             <div className={styles.settingsImg}>
                 <div className={styles.imgWrapper}>
                     <img src={userPhoto} alt="avatar" />
@@ -29,14 +29,14 @@ export const SettingsPage: FC = () => {
             </div>
             <div className={styles.btnWrap}>
                 <ButtonOutline
-                    text="Сменить фото профиля"
+                    text="Cambiar foto de perfil"
                     handleClick={() => dispatch(setChangeAvatarModalIsOpen(true))}
                 />
             </div>
             <div className={styles.btnWrap}>
                 <ButtonOutline
                     color="red"
-                    text="Удалить аккаунт"
+                    text="Borrar cuenta"
                     handleClick={() => dispatch(setConfirmModalIsOpen(true))}
                 />
             </div>
@@ -46,7 +46,7 @@ export const SettingsPage: FC = () => {
             />
             <ConfirmPopup isOpened={isOpenConfirmModal} onClose={() => dispatch(setConfirmModalIsOpen(false))}>
                 <DeleteContent
-                    message="Вы действительно хотите удалить аккаунт?"
+                    message="¿Estás seguro de que quieres eliminar tu cuenta?"
                     onOk={() => dispatch(deleteUserFromApp())}
                 />
             </ConfirmPopup>

@@ -47,7 +47,7 @@ export const addWorkoutToCalendarAsync = (
             await batch.commit();
             dispatch(setIsLoadingWorkoutCalendar(false));
             dispatch(addSomeWorkoutsToCalendar(workoutsArr));
-            enqueueSnackbar('Тренировки на календарь успешно добавлены', { variant: 'success' });
+            enqueueSnackbar('Los entrenamientos se han agregado con éxito al calendario.', { variant: 'success' });
         };
         try {
             switch (howToRepeat) {
@@ -57,7 +57,9 @@ export const addWorkoutToCalendarAsync = (
                     await setDoc(userWorkoutDoc, workout);
                     dispatch(setIsLoadingWorkoutCalendar(false));
                     dispatch(addWorkoutToCalendar(workout));
-                    enqueueSnackbar('Тренировка на календарь успешно добавлена', { variant: 'success' });
+                    enqueueSnackbar('El entrenamiento se ha añadido correctamente al calendario.', {
+                        variant: 'success',
+                    });
                     break;
                 case HOW_TO_REPEAT.ONCE_A_WEEK:
                     await setWorkoutsData(HOW_TO_REPEAT.ONCE_A_WEEK, workout);
@@ -71,7 +73,7 @@ export const addWorkoutToCalendarAsync = (
             }
         } catch (err) {
             console.log(err);
-            enqueueSnackbar('Не удалось добавить тренировку', { variant: 'error' });
+            enqueueSnackbar('No se pudo agregar el entrenamiento', { variant: 'error' });
         }
     };
 };

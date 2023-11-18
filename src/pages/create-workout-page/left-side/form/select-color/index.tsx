@@ -17,7 +17,7 @@ export const SelectColor: FC<SelectColorType> = ({ selectColor, selectColorHandl
 
     return (
         <div className={styles.wrapper}>
-            <span>Цвет тренировки</span>
+            <span>Color de entrenamiento</span>
             <ul className={styles.list}>
                 {workoutColors.map((color) => (
                     <li

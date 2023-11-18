@@ -32,7 +32,7 @@ export const WorkoutsList: FC<WorkoutListPropsType> = ({ deleteWorkoutClickHandl
     return (
         <div className={styles.list}>
             {_.isEmpty(workoutsForTheDay) ? (
-                <p>Нет активных тренировок</p>
+                <p>Sin entrenamiento activo</p>
             ) : (
                 <ul>
                     {workoutsForTheDay.map((workout) => (

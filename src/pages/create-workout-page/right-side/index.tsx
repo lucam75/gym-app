@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 
 export const RightSide: FC = () => {
     return (
-        <Right title="Список упражнений">
+        <Right title="Lista de ejercicios">
             <div className={styles.block}>
                 <div className={styles.content}>
                     <ExerciseAccordion />

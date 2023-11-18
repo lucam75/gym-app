@@ -68,9 +68,9 @@ export const ChoiceWorkouts: FC = () => {
                 <span className={styles.back} onClick={() => dispatch(setStepWorkoutModal(STEP_MODAL.WORKOUTS))}>
                     <MdArrowBack size={20} />
                 </span>
-                <h3 className={styles.title}>Выберите тренировку из списка</h3>
+                <h3 className={styles.title}>Seleccione un entrenamiento de la lista</h3>
                 {_.isEmpty(userWorkout) ? (
-                    <p className={styles.noWorkout}>Нет созданных тренировок</p>
+                    <p className={styles.noWorkout}>No se crearon entrenamientos</p>
                 ) : (
                     <div className={styles.workoutList}>
                         {userWorkoutArr.map((workout) => (
@@ -87,7 +87,7 @@ export const ChoiceWorkouts: FC = () => {
             </div>
             <div className={styles.botBlock}>
                 {_.isEmpty(userWorkout) ? (
-                    <ButtonStandard handleClick={createWorkoutClickHandler} name={'Создать тренировку'} />
+                    <ButtonStandard handleClick={createWorkoutClickHandler} name={'Crear un entrenamiento'} />
                 ) : (
                     <>
                         <div className={styles.selectGroup}>
@@ -98,7 +98,7 @@ export const ChoiceWorkouts: FC = () => {
                         </div>
                         <ButtonStandard
                             handleClick={addWorkoutOnCalendarClickHandler}
-                            name={'Добавить'}
+                            name={'Agregar'}
                             disabled={!selectWorkout}
                             isLoading={isLoadingWorkoutCalendar}
                         />

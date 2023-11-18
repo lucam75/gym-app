@@ -33,12 +33,11 @@ export const userAuth = (email: string, password: string, type: 'signIn' | 'regi
             const user = (await USER_AUTH_CONFIG[type](auth, email, password)).user;
             if (type === 'register') {
                 const userExerciseListDoc = doc(db, `users/${user.uid}/exerciseList/${uuidv4()}`);
-                await setDoc(userExerciseListDoc, basicExerciseList); // При регистрации добавляю юзеру базовый список упражнений
-
+                await setDoc(userExerciseListDoc, basicExerciseList); // Al registrarme, agrego una lista básica de ejercicios al usuario
                 const imageRef = ref(storage, `usersAvatar/${user.uid}`);
                 const anonymImgRef = ref(storage, `usersAvatar/anonym.jpg`);
                 const blob = await getBlob(anonymImgRef);
-                const res = await uploadBytes(imageRef, blob); //Добавляю дефолтное фото нового пользователя
+                const res = await uploadBytes(imageRef, blob); // Agregar una foto predeterminada de un nuevo usuario
                 const photoURL = await getDownloadURL(res.ref);
 
                 await updateProfile(user, {

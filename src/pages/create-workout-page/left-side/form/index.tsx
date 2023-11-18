@@ -99,7 +99,7 @@ export const Form: FC<FormPropsType> = ({ clearTemporaryExercise, editableWorkou
                     variant="standard"
                     id="workoutName"
                     name="workoutName"
-                    label="Введите название тренировки"
+                    label="Introduce el nombre del entrenamiento"
                     value={formik.values.workoutName}
                     onChange={formik.handleChange}
                     error={formik.touched.workoutName && Boolean(formik.errors.workoutName)}
@@ -111,7 +111,7 @@ export const Form: FC<FormPropsType> = ({ clearTemporaryExercise, editableWorkou
             </div>
             <ButtonStandard
                 handleClick={() => {}}
-                name={editableWorkoutId ? 'Завершить редактирование' : 'Создать тренировку'}
+                name={editableWorkoutId ? 'Terminar de editar' : 'Crear un entrenamiento'}
                 disabled={temporaryExercise.length === 0}
                 type="submit"
             />

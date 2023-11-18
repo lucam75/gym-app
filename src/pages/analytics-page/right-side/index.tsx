@@ -13,9 +13,9 @@ type RightSideType = {
 
 export const RightSide: FC<RightSideType> = ({ selectedExerciseGroup }) => {
     return (
-        <Right title="Статистика по упражнению">
+        <Right title="Estadísticas de ejercicio">
             {!selectedExerciseGroup && (
-                <p className={styles.noContent}>Чтобы посмотреть статистику по упражнению выберите его</p>
+                <p className={styles.noContent}>Para ver las estadísticas de un ejercicio, selecciónelo</p>
             )}
             {selectedExerciseGroup && <h3 className={styles.title}>{selectedExerciseGroup[0].name}</h3>}
             {selectedExerciseGroup && <Table selectedExerciseGroup={selectedExerciseGroup} />}

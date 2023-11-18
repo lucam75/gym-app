@@ -37,12 +37,15 @@ export const CalendarHeader: FC<CalendarHeaderType> = memo(({ changeDayRef }) =>
             <div className={styles.wrapper}>
                 <div className={styles.wrapperGroupBtn}>
                     <div className={styles.btnWrapper} onMouseDown={() => dispatch(resetMonthIndex())}>
-                        <ButtonOutline text="Тренировка на сегодня" handleClick={(e) => workoutForDayClickHandler(e)} />
+                        <ButtonOutline
+                            text="Entrenamiento para hoy"
+                            handleClick={(e) => workoutForDayClickHandler(e)}
+                        />
                     </div>
                 </div>
                 <div className={styles.wrapperGroupBtn}>
                     <div className={styles.btnWrapper}>
-                        <ButtonOutline text="Сегодня" handleClick={() => buttonClickHandler(resetMonthIndex)} />
+                        <ButtonOutline text="Hoy" handleClick={() => buttonClickHandler(resetMonthIndex)} />
                     </div>
                     <button className={styles.btn} onClick={() => buttonClickHandler(decMonthIndex)}>
                         <MdArrowBackIosNew />

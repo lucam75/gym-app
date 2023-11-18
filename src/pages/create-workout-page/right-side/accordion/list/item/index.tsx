@@ -156,11 +156,11 @@ export const Item: FC<ItemType> = ({ exercisesGroup, exercise, index, changeSele
                                 onChange={(e) => setCreateInputValue(e.target.value)}
                                 onBlur={createExerciseToggler}
                                 color="success"
-                                placeholder="Введите название упражнения"
+                                placeholder="Introduzca el nombre del ejercicio"
                             />
                         </>
                     ) : (
-                        <Tooltip title="Добавьте своё упражнение" disableInteractive enterDelay={500} leaveDelay={200}>
+                        <Tooltip title="Añade tu propio ejercicio" disableInteractive enterDelay={500} leaveDelay={200}>
                             <div className={styles.iconContainer} onClick={createExerciseToggler}>
                                 <BsPlusSquareDotted />
                             </div>

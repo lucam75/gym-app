@@ -11,7 +11,7 @@ type LeftSideType = {
 
 export const LeftSide: FC<LeftSideType> = ({ clearTemporaryExercise, editableWorkoutId }) => {
     return (
-        <Left title="Моя тренировка">
+        <Left title="Mi entrenamiento">
             <Form clearTemporaryExercise={clearTemporaryExercise} editableWorkoutId={editableWorkoutId} />
         </Left>
     );

@@ -97,7 +97,7 @@ export const ExerciseAccordion: FC = () => {
             ))}
             <ConfirmPopup onClose={onCloseConfirmPopup} isOpened={isOpenConfirmModal}>
                 <DeleteContent
-                    message={`Вы уверены что хотите удалить упражнение ${selectExercise?.name}?`}
+                    message={`¿Está seguro de que desea eliminar el ejercicio ${selectExercise?.name}?`}
                     onOk={deleteExerciseHandler}
                 />
             </ConfirmPopup>

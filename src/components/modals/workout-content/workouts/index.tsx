@@ -25,7 +25,7 @@ export const Workouts: FC = () => {
     return (
         <div className={styles.content}>
             <div className={styles.block}>
-                <h3 className={styles.title}>Тренировки на этот день</h3>
+                <h3 className={styles.title}>Entrenamiento para este día</h3>
                 <WorkoutsList deleteWorkoutClickHandler={deleteWorkoutClickHandler} />
             </div>
             <div className={styles.btn}>

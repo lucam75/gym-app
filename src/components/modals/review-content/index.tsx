@@ -46,7 +46,7 @@ export const ReviewContent: FC = () => {
                 <Rating name="rating" size="large" value={+formik.values.rating} onChange={formik.handleChange} />
                 <TextField
                     name="message"
-                    label="Напишите отзыв"
+                    label="Escribe una reseña"
                     fullWidth
                     multiline
                     rows={7}
@@ -73,7 +73,7 @@ export const ReviewContent: FC = () => {
                 />
                 <div className={styles.btnWrapper}>
                     <ButtonStandard
-                        name="Готово"
+                        name="Enviar"
                         type={'submit'}
                         disabled={!(formik.values.message && formik.values.rating)}
                         isLoading={isLoading}

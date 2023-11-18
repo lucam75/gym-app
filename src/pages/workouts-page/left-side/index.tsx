@@ -19,12 +19,12 @@ export const LeftSide: FC<LeftSidePropsType> = memo(({ setWorkoutClickHandlerCal
         navigate(ROUTE_PATH.CREATE_WORKOUT);
     };
     return (
-        <Left title="Cписок ваших тренировок">
+        <Left title="Lista de tus entrenamientos">
             <div className={styles.block}>
                 <div className={styles.content}>
                     <WorkoutList setWorkoutClickHandlerCallback={setWorkoutClickHandlerCallback} />
                 </div>
-                <ButtonStandard name="Создать тренировку" handleClick={btnClickHandler} />
+                <ButtonStandard name="Crear un entrenamiento" handleClick={btnClickHandler} />
             </div>
         </Left>
     );

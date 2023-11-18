@@ -50,7 +50,7 @@ export const WorkoutList: FC<WorkoutListPropTypes> = ({ setWorkoutClickHandlerCa
     return (
         <>
             {_.isEmpty(userWorkouts) ? (
-                <p className={styles.notWorkouts}>Вы не создали ни одной тренировки</p>
+                <p className={styles.notWorkouts}>No has creado ningún entrenamiento</p>
             ) : (
                 <ul className={styles.listWorkout}>
                     {_.toArray(userWorkouts).map((workout, i) => (
@@ -61,12 +61,12 @@ export const WorkoutList: FC<WorkoutListPropTypes> = ({ setWorkoutClickHandlerCa
                         >
                             <p className={styles.name}>{workout.workoutName}</p>
                             <div className={styles.settingsBlock}>
-                                <Tooltip title="Редактировать" disableInteractive enterDelay={500}>
+                                <Tooltip title="Editar" disableInteractive enterDelay={500}>
                                     <div className={styles.itemWrapper} onClick={() => onClickEditWorkout(workout.id)}>
                                         <TiPencil className={styles.settingItem} />
                                     </div>
                                 </Tooltip>
-                                <Tooltip title="Удалить" disableInteractive enterDelay={500}>
+                                <Tooltip title="Borrar" disableInteractive enterDelay={500}>
                                     <div
                                         className={styles.itemWrapper}
                                         onMouseDown={() => onClickDeleteIcon(workout.id)}
@@ -80,7 +80,10 @@ export const WorkoutList: FC<WorkoutListPropTypes> = ({ setWorkoutClickHandlerCa
                 </ul>
             )}
             <ConfirmPopup onClose={onCloseConfirmPopup} isOpened={isOpenConfirmModal}>
-                <DeleteContent message="Вы уверены что хотите удалить тренировку?" onOk={onClickDeleteWorkout} />
+                <DeleteContent
+                    message="¿Estás seguro de que deseas eliminar el entrenamiento?"
+                    onOk={onClickDeleteWorkout}
+                />
             </ConfirmPopup>
         </>
     );

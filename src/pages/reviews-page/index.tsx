@@ -20,7 +20,7 @@ export const ReviewPage: FC = () => {
     const dispatch = useAppDispatch();
     return (
         <Container>
-            <h2 className={styles.title}>Отзывы о приложении</h2>
+            <h2 className={styles.title}>Reseñas sobre la aplicación.</h2>
             <div className={styles.wrapper}>
                 <div className={styles.reviewContainer}>
                     {reviews && reviewsSortByDate.map((review) => <Review key={review.id} review={review} />)}

@@ -17,8 +17,8 @@ export const RightSide: FC<RightSideTypeProps> = ({ workoutId }) => {
     const exercises = workoutId && workouts[workoutId].exercises;
     const sortedExerciseByPosition = exercises ? getSortedExerciseByPosition(exercises) : [];
     return (
-        <Right title="Упражнения">
-            {!workoutId && <p className={styles.noContent}>Чтобы посмотреть упражнения выберите тренировку</p>}
+        <Right title="Ejercicios">
+            {!workoutId && <p className={styles.noContent}>Para ver los ejercicios, seleccione un entrenamiento</p>}
             <ul className={styles.exerciseList}>
                 {sortedExerciseByPosition.map((exercise) => (
                     <li key={exercise.id} className={styles.exerciseItem}>
